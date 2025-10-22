@@ -48,8 +48,8 @@ La demo muestra cómo un visitante puede recorrer las habitaciones, consultar pr
 
 ## 🧑‍💻 Autor
 
-**Desarrollado por:** [Santino Sebastiani](#)  
-💼 *Analista de datos & desarrollador de sistemas turísticos inteligentes.*
+**Desarrollado por:** [Santino Sebastian Rios](#)  
+💼 *Analista de datos & desarrollador de sistemas inteligentes.*
 
 📬 Contacto: **santino.sebastiani@outlook.com**  
 🌐 Portfolio: *en construcción*
