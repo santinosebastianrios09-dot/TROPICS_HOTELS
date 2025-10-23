@@ -1,0 +1,29 @@
+name: Fix paths for GitHub Pages
+
+on:
+  workflow_dispatch: {}   # Podés lanzarlo manualmente desde "Actions"
+
+jobs:
+  run-fixer:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Run fixer
+        run: |
+          python fix_github_pages_paths.py
+          echo "== Done =="
+
+      - name: Commit changes (if any)
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: fix absolute paths for GitHub Pages"
+          commit_user_name: "github-actions[bot]"
+          commit_user_email: "github-actions[bot]@users.noreply.github.com"
+          commit_author: "github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
