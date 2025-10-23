@@ -112,7 +112,7 @@
       ...r,
       name: r.name || r.NOMBRE || r.habitacion || r.HABITACIONES || r.id || 'Habitación',
       id: r.id || r.ID || r.name,
-      imageUrl: image || '/img/hotel-1.jpg',
+      imageUrl: image || 'img/hotel-1.jpg',
       amenities: splitAmenities(amenities)
     };
   }

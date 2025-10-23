@@ -6,12 +6,12 @@
     <title>Tropics Hotel – Reservas</title>
 
     <!-- Logo como favicon (opcional) -->
-    <link rel="icon" href="/img/logo-tropics.jpg" />
-    <link rel="stylesheet" href="/chat-widget.css" />
+    <link rel="icon" href="img/logo-tropics.jpg" />
+    <link rel="stylesheet" href="chat-widget.css" />
 
     <!-- Estilos/animaciones del CHAT (solo visual) -->
-    <link rel="stylesheet" href="/visual/chat-visual.css" />
-    <script defer src="/visual/chat-visual.js"></script>
+    <link rel="stylesheet" href="visual/chat-visual.css" />
+    <script defer src="visual/chat-visual.js"></script>
 
     <style>
       :root { --brand:#123; --accent:#14b8a6; --jade:#00a86b; --jade2:#16c38a; }
@@ -23,7 +23,7 @@
         font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
         color:#1d1d1f;
 
-        background-image: url('/img/bg-gray.jpg'); /* <-- NUEVO FONDO */
+        background-image: url('img/bg-gray.jpg'); /* <-- NUEVO FONDO */
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -220,7 +220,7 @@
   <body>
     <header class="container">
       <div class="brand">
-        <img id="logoImage" src="/img/logo-tropics.jpg" alt="Logo" onerror="this.style.display='none'">
+        <img id="logoImage" src="img/logo-tropics.jpg" alt="Logo" onerror="this.style.display='none'">
         Tropics Hotel
       </div>
     </header>
@@ -384,7 +384,7 @@
         }
 
         /* ===== Carrusel: hero ===== */
-        const heroImgs = ["/img/hotel-1", "/img/hotel-2", "/img/hotel-3"]; // sin extensión
+        const heroImgs = ["img/hotel-1", "img/hotel-2", "img/hotel-3"]; // sin extensión
         const heroImgEl = document.getElementById('hero-img');
         const heroDots = document.getElementById('hero-dots');
         let hi = 0;
@@ -407,7 +407,7 @@
         showHero(0);
 
         /* ===== Carrusel: lobby (auto-agrega lobby-2 si existe) ===== */
-        const lobbyBaseList = ["/img/lobby"]; // base sin extensión
+        const lobbyBaseList = ["img/lobby"]; // base sin extensión
         const lobbyImgEl = document.getElementById('lobby-img');
         const lobbyDots = document.getElementById('lobby-dots');
         let li = 0;
@@ -433,9 +433,9 @@
         showLobby(0);
 
         // 🔸 si existe /img/lobby-2.(jpg|jpeg|webp), se agrega automáticamente
-        probeBaseExists("/img/lobby-2", (exists) => {
+        probeBaseExists("img/lobby-2", (exists) => {
           if (exists) {
-            lobbyBaseList.push("/img/lobby-2");
+            lobbyBaseList.push("img/lobby-2");
             renderLobbyDots();
           }
         });
@@ -485,7 +485,7 @@
               return;
             }
             imgEl.onerror = () => { i++; tryNext(); };
-            imgEl.src = "/img/" + base + exts[i];
+            imgEl.src = "img/" + base + exts[i];
           }
           tryNext();
         }
@@ -682,10 +682,10 @@
     </script>
 
     <!-- Chat dock a la derecha (NO TOCAR) -->
-    <script src="/chat-widget.js" defer></script>
+    <script src="chat-widget.js" defer></script>
 
     <!-- 🟢 NUEVO: Botón fijo centrado inferior -> abre la simulación en nueva pestaña -->
-    <a href="/chat-simulacion.html" target="_blank" rel="noopener" id="simulate-fab" aria-label="Comenzar simulación">
+    <a href="chat-simulacion.html" target="_blank" rel="noopener" id="simulate-fab" aria-label="Comenzar simulación">
       Comenzar simulación
     </a>
   </body>

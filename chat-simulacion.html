@@ -286,8 +286,8 @@
     document.getElementById('backBtn').addEventListener('click', () => {
       try{
         if (window.history.length > 1 && document.referrer) { window.history.back(); }
-        else { window.location.href = '/'; }
-      } catch { window.location.href = '/'; }
+        else { window.location.href = ''; }
+      } catch { window.location.href = ''; }
     });
 
     // === Query param: room ===

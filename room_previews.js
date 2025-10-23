@@ -2,9 +2,9 @@
 (function(){
   const API = '';
   const ROOM_INFO = {
-    "Doble estándar": { imageUrl: "/img/doble-estandar.jpg", amenities: ["1 cama doble grande","Wi-Fi gratis","Baño privado","Aire acondicionado"] },
-    "Simple estándar": { imageUrl: "/img/simple-estandar-1.jpg", amenities: ["1 cama simple","Wi-Fi gratis","Baño privado","Aire acondicionado"] },
-    "Suite premium": { imageUrl: "/img/suite-premium.jpg", amenities: ["Cama king","Wi-Fi gratis","Baño privado","Aire acondicionado","Vista"] }
+    "Doble estándar": { imageUrl: "img/doble-estandar.jpg", amenities: ["1 cama doble grande","Wi-Fi gratis","Baño privado","Aire acondicionado"] },
+    "Simple estándar": { imageUrl: "img/simple-estandar-1.jpg", amenities: ["1 cama simple","Wi-Fi gratis","Baño privado","Aire acondicionado"] },
+    "Suite premium": { imageUrl: "img/suite-premium.jpg", amenities: ["Cama king","Wi-Fi gratis","Baño privado","Aire acondicionado","Vista"] }
   };
   const esc = (x)=>String(x).replace(/[&<>\"']/g, s=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[s]));
   const q = (sel,root=document)=>root.querySelector(sel);
@@ -20,7 +20,7 @@
     if (!Array.isArray(amenities)) amenities = info?.amenities || [];
     return {
       ...r,
-      imageUrl: r.imageUrl || info?.imageUrl || '/img/hotel-1.jpg',
+      imageUrl: r.imageUrl || info?.imageUrl || 'img/hotel-1.jpg',
       amenities
     };
   }
