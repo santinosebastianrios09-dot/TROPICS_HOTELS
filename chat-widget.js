@@ -1308,12 +1308,8 @@
     const cont = document.createElement('button');
     cont.className = 'cw-btn cw-btn-fast'; // ← destacado para Reserva rápida
     cont.textContent = 'Presione continuar';
+    // 🔧 MODIFICADO: ya NO abre la simulación. Solo continúa el flujo local del chat.
     cont.onclick = () => {
-      // ✅ Solo aquí abrimos la nueva pestaña
-      const url = '/chat-simulacion.html?room=' + encodeURIComponent(roomName || '');
-      window.open(url, '_blank', 'noopener');
-
-      // (Opcional) continuar el flujo local. Si NO querés que siga, comentá la línea siguiente:
       askReservaNombre();
     };
     actions.appendChild(cont);
